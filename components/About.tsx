@@ -42,7 +42,7 @@ Tools: Eclipse, IntelliJ IDEA, VS Code, Git, GitHub.
         <div className="relative">
           <div className="rounded-[3rem] overflow-hidden shadow-2xl border-[12px] border-white dark:border-gray-800 transition-colors duration-300">
             <img 
-              src="./img/Ajinkya2.jpg" 
+              src="img/Ajinkya2.jpg" 
               alt="Ajinkya Gholap Professional Portrait" 
               className="w-full h-auto object-cover scale-105 hover:scale-100 transition-transform duration-700"
             />

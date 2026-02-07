@@ -4,37 +4,7 @@ import { PERSONAL_INFO } from '../constants';
 import { FileDown, ArrowRight } from 'lucide-react';
 
 const About: React.FC = () => {
-  const handleDownloadResume = () => {
-    const resumeContent = `
-AJINKYA GHOLAP
-Java Developer
-Email: ${PERSONAL_INFO.email}
-Phone: ${PERSONAL_INFO.phone}
-
-PROFILE:
-${PERSONAL_INFO.profile}
-
-EXPERIENCE:
-1. Java Development Intern | SaiKet Systems (Jan 2025 – Mar 2025)
-2. Web Development Intern | Cognifyz Technologies (Oct 2024 – Dec 2024)
-
-EDUCATION:
-- MCA | Saraswati College, Amravati (2024-2026)
-- BCS | Dr. G. K. College, Amravati (2020-2023)
-
-SKILLS:
-Technical: Java, SQL, JDBC, Servlets, JSP, HTML5, CSS3, JavaScript, Spring Boot.
-Tools: Eclipse, IntelliJ IDEA, VS Code, Git, GitHub.
-    `;
-    const blob = new Blob([resumeContent], { type: 'text/plain' });
-    const url = window.URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.setAttribute('download', 'Ajinkya_Gholap_Resume.txt');
-    document.body.appendChild(link);
-    link.click();
-    link.parentNode?.removeChild(link);
-  };
+  // Resume download handled via direct link to /resume.pdf in public folder
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -81,13 +51,14 @@ Tools: Eclipse, IntelliJ IDEA, VS Code, Git, GitHub.
               <span>Contact Me</span>
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
             </a>
-            <button 
-              onClick={handleDownloadResume}
+            <a 
+              href="Ajinkya_Gholap.pdf"
+              download="Ajinkya_Gholap.pdf"
               className="flex items-center justify-center space-x-4 bg-white dark:bg-gray-900 border-2 border-gray-100 dark:border-gray-700 text-gray-900 dark:text-white px-10 py-5 rounded-full text-lg font-bold hover:border-orange-600 dark:hover:border-orange-500 hover:text-orange-600 dark:hover:text-orange-500 transition-all shadow-sm"
             >
               <FileDown size={20} />
               <span>Download CV</span>
-            </button>
+            </a>
           </div>
         </div>
       </div>

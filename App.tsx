@@ -58,7 +58,7 @@ const App: React.FC = () => {
           <Certifications />
         </section>
 
-        <section id="contact" className="py-20 bg-[#F9FAFB] dark:bg-gray-950">
+        <section id="contact-section" className="py-20 bg-[#F9FAFB] dark:bg-gray-950">
           <Contact />
         </section>
       </main>

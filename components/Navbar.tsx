@@ -20,7 +20,7 @@ const Navbar: React.FC = () => {
     { name: 'Skills', href: '#skills' },
     { name: 'Projects', href: '#projects' },
     { name: 'Experience', href: '#experience' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Contact', href: '#contact-section' },
   ];
 
   return (
@@ -81,8 +81,8 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Menu Overlay */}
       <div 
-        className={`md:hidden absolute top-24 left-4 right-4 bg-white/95 dark:bg-gray-900/95 backdrop-blur-2xl border border-gray-100 dark:border-gray-800 shadow-2xl rounded-3xl overflow-hidden transition-all duration-300 ease-out pointer-events-auto
-          ${isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'}`}
+        className={`md:hidden absolute top-24 left-4 right-4 bg-white/95 dark:bg-gray-900/95 backdrop-blur-2xl border border-gray-100 dark:border-gray-800 shadow-2xl rounded-3xl overflow-hidden transition-all duration-300 ease-out
+          ${isOpen ? 'opacity-100 translate-y-0 pointer-events-auto visible' : 'opacity-0 -translate-y-4 pointer-events-none invisible'}`}
       >
         <div className="px-4 py-6 space-y-2">
           {navLinks.map((link) => (
